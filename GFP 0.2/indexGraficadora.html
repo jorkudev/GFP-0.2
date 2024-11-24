@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graficadora</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="stylesGraficadora.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Graficadora</h1>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <form id="gestionForm">
+                    <!-- Ingresos -->
+                    <div class="form-column ingreso-frecuencia">
+                        <h2>Ingresos y Gastos</h2>
+                        <label for="ingreso">¿Cuál es tu ingreso?</label>
+                        <input type="number" id="ingreso" min="0" step="any" required>
+
+                        <label for="frecuencia" class="frecuencia-label">Frecuencia de ingresos:</label>
+                        <select id="frecuencia" required>
+                            <option value="mensual">Mensual</option>
+                            <option value="quincenal">Quincenal</option>
+                            <option value="semanal">Semanal</option>
+                        </select>
+                    </div>
+
+                    <!-- Gastos -->
+                    <fieldset class="form-column">
+                        <legend>Gastos</legend>
+                        <!-- Comida -->
+                        <div>
+                            <p>¿Gastas en comida?</p>
+                            <label><input type="radio" name="gastoComida" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoComida" value="no"> No</label>
+                        </div>
+                        <div id="comidaDetails" class="oculto">
+                            <label for="gastoComida">Monto mensual en comida:</label>
+                            <input type="number" id="gastoComida" min="0" step="any">
+                        </div>
+
+                        <!-- Transporte -->
+                        <div id="gastoTransporteSection">
+                            <p>¿Gastas en transporte público?</p>
+                            <label><input type="radio" name="gastoTransporte" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoTransporte" value="no"> No</label>
+                            <div id="transporteDetails" class="oculto">
+                                <label for="transporteTipo">Tipo de transporte:</label>
+                                <select id="transporteTipo">
+                                    <option value="metro">Metro</option>
+                                    <option value="camion">Camión Urbano</option>
+                                </select>
+                                <label for="numeroViajes">Número de viajes al mes:</label>
+                                <input type="number" id="numeroViajes" min="0" step="1">
+                            </div>
+                        </div>
+
+                        <!-- Gasolina -->
+                        <div id="gastoGasolinaSection">
+                            <p>¿Te mueves en auto propio?</p>
+                            <label><input type="radio" name="gastoGasolina" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoGasolina" value="no"> No</label>
+                            <div id="gasolinaDetails" class="oculto">
+                                <label for="gastoGasolina">¿Cuánto gastas en gasolina al mes?</label>
+                                <input type="number" id="gastoGasolina" min="0" step="any">
+                            </div>
+                        </div>
+
+                        <!-- Otras categorías -->
+                        <div id="gastoAdicionalSection">
+                            <p>¿Gastas en colegiaturas?</p>
+                            <label><input type="radio" name="gastoColegiaturas" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoColegiaturas" value="no"> No</label>
+                            <div id="colegiaturasDetails" class="oculto">
+                                <label for="gastoColegiaturas">Monto mensual:</label>
+                                <input type="number" id="gastoColegiaturas" min="0" step="1">
+                            </div>
+
+                            <p>¿Pagas renta?</p>
+                            <label><input type="radio" name="gastoRenta" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoRenta" value="no"> No</label>
+                            <div id="rentaDetails" class="oculto">
+                                <label for="gastoRenta">Monto mensual:</label>
+                                <input type="number" id="gastoRenta" min="0" step="1">
+                            </div>
+
+                            <p>¿Tienes gastos en teléfono/celular?</p>
+                            <label><input type="radio" name="gastoCelular" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoCelular" value="no"> No</label>
+                            <div id="celularDetails" class="oculto">
+                                <label for="gastoCelular">Monto mensual:</label>
+                                <input type="number" id="gastoCelular" min="0" step="1">
+                            </div>
+
+                            <p>¿Gastas en entretenimiento?</p>
+                            <label><input type="radio" name="gastoEntretenimiento" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoEntretenimiento" value="no"> No</label>
+                            <div id="entretenimientoDetails" class="oculto">
+                                <label for="gastoEntretenimiento">Monto mensual:</label>
+                                <input type="number" id="gastoEntretenimiento" min="0" step="1">
+                            </div>
+
+                            <p>¿Pagas tarjetas de crédito?</p>
+                            <label><input type="radio" name="gastoTarjetas" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoTarjetas" value="no"> No</label>
+                            <div id="tarjetasDetails" class="oculto">
+                                <label for="gastoTarjetas">Monto mensual:</label>
+                                <input type="number" id="gastoTarjetas" min="0" step="1">
+                            </div>
+
+                            <p>¿Pagas otros créditos?</p>
+                            <label><input type="radio" name="gastoOtrosCreditos" value="si"> Sí</label>
+                            <label><input type="radio" name="gastoOtrosCreditos" value="no"> No</label>
+                            <div id="otrosCreditosDetails" class="oculto">
+                                <label for="gastoOtrosCreditos">Monto mensual:</label>
+                                <input type="number" id="gastoOtrosCreditos" min="0" step="1">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit" id="calcularBtn" class="button calcular">Calcular</button>
+                    <button type="button" id="clearLocalStorage" class="button limpiar-memoria">Limpiar Memoria</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="chart-section">
+            <h2>Gráfica</h2>
+            <canvas id="myChart" width="300" height="300"></canvas>
+        </section>
+
+    </main>
+
+    <script src="scriptGraficadora.js"></script>
+</body>
+
+<footer>
+    <p>Creado por Proyecto GFP. © 2024</p>
+</footer>
+
+</html>

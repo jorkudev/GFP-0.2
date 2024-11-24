@@ -1,0 +1,218 @@
+/* Estilos básicos */
+body {
+    width: 100%; /* Para que ocupe todo el ancho de la ventana */
+    height: 1000px; /* Usa toda la altura de la ventana visible */
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    padding: 0; /* Elimina cualquier relleno predeterminado */
+    overflow-x: hidden; /* Evita que aparezca una barra de desplazamiento horizontal */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #5F3C51, #09354C);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: xx-large;
+    color: white /* Cambia el color de la fuente */;
+}
+
+/* Sección principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Formulario */
+.form-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 784px;
+    height: auto;
+}
+
+    .form-section h2 {
+        color: #000000;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+/* Estilo básico para el campo de color */
+#eventColor {
+    width: 100%; /* Ancho personalizado */
+    height: 40px; /* Alto personalizado */
+    border: 2px solid #ffffff; /* Borde personalizado */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor en forma de mano */
+    padding: 0; /* Eliminar el espacio interior */
+}
+
+    /* Estilo cuando el input recibe focus */
+    #eventColor:focus {
+        border-color: #2c3e50; /* Cambiar borde al hacer focus */
+        box-shadow: 0 0 5px rgba(44, 62, 80, 0.7); /* Efecto de sombra */
+    }
+
+
+/* Estilo para la sección de edición */
+#editSection {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: none; /* Oculto inicialmente */
+}
+
+    #editSection h2 {
+        margin-top: 0;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    #editSection form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #editSection label {
+        margin: 5px 0;
+        font-weight: bold;
+    }
+
+    #editSection input {
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #editSection button {
+        margin: 5px 0;
+        padding: 10px;
+        background-color: #29596B;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        #editSection button:hover {
+            background-color: #3C4C5F;
+        }
+
+    #editSection #cancelEdit {
+        background-color: #6c757d;
+    }
+
+        #editSection #cancelEdit:hover {
+            background-color: #495057;
+        }
+
+    #editSection #deleteEvent {
+        background-color: #D0180A;
+    }
+
+        #editSection #deleteEvent:hover {
+            background-color: #9D2A22;
+        }
+
+/* Botón Limpiar Todos los Eventos, ubicado arriba del menú */
+.clear-storage-section {
+    text-align: center; /* Centra el botón horizontalmente */
+    margin-top: 20px
+}
+
+    .clear-storage-section button {
+        background-color: #D0180A;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        .clear-storage-section button:hover {
+            background-color: #9D2A22;
+        }
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input,
+form button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form button {
+    background: #29596B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+    transition: background 0.3s ease;
+}
+
+    form button:hover {
+        background: #3C4C5F;
+    }
+
+/* Calendario */
+.calendar-section {
+    flex: 1;
+    min-width: 500px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px; /* Ajusta el ancho máximo del calendario */
+    height: 800px; /* Ajusta la altura del calendario */
+}
+
+    .calendar-section h2 {
+        color: #000000;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+/* FullCalendar overrides */
+#calendar {
+    margin-top: 1rem;
+    height: 650px; /* Ajusta el calendario para que ocupe toda la altura del contenedor */
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center; /* Centra el contenido */
+    padding: 1rem; /* Espaciado interno */
+    color: white; /* Color del texto */
+    position: relative; /* Asegura que esté dentro del flujo de la página */
+    margin-top: 20px; /* Espacio superior */
+    font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+}
