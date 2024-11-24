@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <style>
+        /* Estilo del cuerpo */
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #5F3C51, #09354C);
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrar verticalmente el contenido */
+            align-items: center; /* Centrar horizontalmente */
+            min-height: 100vh; /* Asegura que el contenido ocupe toda la altura de la pantalla */
+            text-align: center;
+            overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+        }
+
+        /* Contenedor principal */
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 90%;
+            margin: auto;
+            z-index: 1; /* Asegura que se muestre encima del pie de página */
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0rem;
+            color: #000000;
+        } 
+        
+        /* Nombre del Proyecto */
+        h2 {
+            font-size: 2.3rem;
+            margin-top: -0rem;
+            margin-bottom: 1rem;
+            color: #000000;
+        }
+
+        /* Texto descriptivo */
+        d {
+            font-size: 1rem;
+            color:black;
+            margin: auto;
+        }
+
+        /* Botón de enlace */
+        .button-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            font-size: 1.1rem;
+            color: white;
+            background-color: #5F3C51;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+            margin: 0.5rem;
+        }
+
+            /* Efecto hover para el botón */
+            .button-link:hover {
+                background-color: #422838;
+                transform: translateY(-3px);
+            }
+
+        /* Estilos para el pie de página */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            color: white;
+            font-size: 0.9rem;
+            position: relative;
+            margin-top: 20px; /* Esto asegura que el pie de página quede al final */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a tu nuevo</h1> 
+            <h2>Gestor Financiero Personal</h2>
+
+        <d>Gestiona tus ingresos, gastos y ahorros con facilidad. Haz clic en uno de los botones para continuar:</d>
+
+        <!-- Primer botón -->
+        <a href="indexPlanificador.html#calendar" class="button-link" target="_blank">Abrir Planificador de Gastos</a>
+
+        <!-- Segundo botón -->
+        <a href="indexGraficadora.html" class="button-link" target="_blank">Abrir Graficadora de Ingresos y Gastos</a>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Creado por Proyecto GFP. © 2024</p>
+    </footer>
+</body>
+</html>
