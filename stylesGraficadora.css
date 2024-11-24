@@ -1,0 +1,174 @@
+﻿/* Estilos básicos */
+body {
+    width: 100%; /* Para que ocupe todo el ancho de la ventana */
+    height: 1000px; /* Usa toda la altura de la ventana visible */
+    margin: 0; /* Elimina cualquier margen predeterminado */
+    padding: 0; /* Elimina cualquier relleno predeterminado */
+    overflow-x: hidden; /* Evita que aparezca una barra de desplazamiento horizontal */
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #5F3C51, #09354C);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+.header {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100px; /* Ajusta la altura del encabezado según lo necesites */
+    font-size:xx-large; /* Ajusta el tamaño de la fuente en el encabezado */ 
+    color:white /* Cambia el color de la fuente */
+}
+
+
+/* Sección principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+}
+
+/* Formulario */
+.form-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+    .form-section h2 {
+        color: #000000;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+
+/* Contenedor de formulario */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Columnas de formulario */
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Estilos de los campos del formulario */
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form button {
+    background: #29596B;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: large;
+    margin-top: 1rem
+}
+
+    form button:hover {
+        background: #3C4C5F;
+    }
+
+/* Estilos para las opciones de gasto (Sí/No en el mismo renglón) */
+form div p {
+    margin-bottom: 0.5rem;
+}
+
+form div label {
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: normal;
+}
+
+/* Estilos para los campos con detalles ocultos */
+.oculto {
+    display: none;
+}
+
+/* Sección de gráfico */
+.chart-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-height: fit-content
+}
+
+    .chart-section h2 {
+        color: #000000;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+/* Botones adicionales */
+button.limpiar-memoria {
+    background-color: #D0180A;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 0.1rem
+}
+
+    button.limpiar-memoria:hover {
+        background-color: #9D2A22;
+    }
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    position: relative;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Estilo para los detalles que se muestran cuando se selecciona "Sí" */
+/* Limitar el ancho de los inputs y selects que se despliegan */
+form .oculto input,
+form .oculto select {
+    max-width: 100%; /* Evita que los inputs/selects se desborden más allá de su contenedor */
+    width: 80%; /* Ajusta el ancho, puedes modificar este valor según tus necesidades */
+    margin: 1rem auto; /* Centra los campos */
+    display: block; /* Muestra los inputs/selects como bloque */
+}
+
+/* Ajustar el ancho del select de transporte */
+#transporteTipo {
+    width: 80%; /* Limita el ancho del select de transporte */
+}
+

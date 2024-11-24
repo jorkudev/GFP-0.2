@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+ <!-- Cambiado a 'es' -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planificador de Gastos</title>
+    <link rel="stylesheet" href="stylesPlanificador.css">
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Planificador de Gastos</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Agregar Evento</h2>
+            <form id="eventForm">
+                <label for="eventName">Nombre del Evento:</label>
+                <input type="text" id="eventName" required>
+
+                <label for="eventDate">Fecha del Evento:</label>
+                <input type="date" id="eventDate" required>
+
+                <!-- Selector de color para el evento -->
+                <label for="eventColor">Color del Evento:</label>
+                <input type="color" id="eventColor" value="#7A5769"> <!-- Valor predeterminado -->
+
+                <button type="submit">Agregar</button>
+            </form>
+
+            <!-- Menú de edición -->
+            <div id="editSection">
+                <h2>Editar Evento</h2>
+                <form id="editForm">
+                    <label for="editName">Nombre del Evento:</label>
+                    <input type="text" id="editName" required>
+
+                    <label for="editDate">Fecha del Evento:</label>
+                    <input type="date" id="editDate" required>
+
+                    <button type="submit">Guardar Cambios</button>
+                    <button type="button" id="cancelEdit">Cancelar</button>
+                    <button type="button" id="deleteEvent">Eliminar</button>
+                </form>
+            </div>
+
+            <section class="clear-storage-section">
+                <button id="clearStorageBtn">Limpiar Todos los Eventos</button>
+            </section>
+        </section>
+
+        <section class="calendar-section">
+            <h2>Calendario</h2>
+            <div id="calendar"></div>
+        </section>
+    </main>
+
+    <!-- FullCalendar Script -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+    <!-- Idioma español -->
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core/locales/es.global.min.js"></script>
+    <script src="scriptPlanificador.js"></script>
+    <footer>
+        <p>Creado por Proyecto GFP. © 2024</p>
+    </footer>
+</body>
+</html>
